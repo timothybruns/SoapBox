@@ -30,7 +30,7 @@ getBookData() {
   fetch('/books')
   .then(res => res.json())
   .then((res) => {
-    debugger;
+    console.log(res)
     this.setState({
       retrievedBookData: true,
       bookData: res.data.books,
@@ -46,7 +46,9 @@ getBookData() {
     return (
       <div>
         <Header />
-        <Content />
+        <Content
+          bookData={this.state.bookData}
+        />
       </div>
     );
   }
