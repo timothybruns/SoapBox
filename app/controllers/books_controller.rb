@@ -6,6 +6,13 @@ class BooksController < ApplicationController
         books: @books
       }
     }
+    # respond_to do |format|
+    #   format.json: {
+    #     data: {
+    #       books: @books
+    #     }
+    #   }
+    # end
   end
 
   def show
@@ -21,6 +28,10 @@ class BooksController < ApplicationController
   end
 
   def create
+    if current_user
+      params[:book][:user_id] = current_user.id
+    end
+
     @book = Book.new(book_params)
 
     if @book.save
@@ -49,6 +60,6 @@ end
 
     private
       def book_params
-        params.require(:book).permit(:title, :author, :genre, :review)
+        params.require(:book).permit(:title, :author, :genre, :review, :user_id)
     end
 end

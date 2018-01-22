@@ -15,11 +15,13 @@ export default class App extends React.Component {
     this.state = {
       retrievedBookData: false,
       bookData: null,
+      addForm: false,
     }
   }
 
 componentDidMount() {
   this.getBookData(this.state.retrievedBookData)
+  // this.showAddForm(this.state.addForm)
 }
 
 getBookData() {
@@ -33,6 +35,16 @@ getBookData() {
     });
   })
 }
+
+// showAddForm() {
+//   fetch('/books/new')
+//   .then((res) => {
+//     console.log(res)
+//     this.setState({
+//       addForm: true,
+//     })
+//   })
+// }
 
 
   render() {

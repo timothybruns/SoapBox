@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get '/login' => 'users#login'
+  post '/attempt_login' => 'users#attempt_login'
+
   resources :books
 
   root 'welcome#index'
