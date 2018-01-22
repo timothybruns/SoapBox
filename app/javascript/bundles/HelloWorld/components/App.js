@@ -12,10 +12,6 @@ export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-
-    // How to set initial state in ES6 class syntax
-    // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    // this.state = { name: this.props.name };
     this.state = {
       retrievedBookData: false,
       bookData: null,
@@ -38,9 +34,6 @@ getBookData() {
   })
 }
 
-  //   updateName = (name) => {
-  //   this.setState({ name });
-  // };
 
   render() {
     return (
