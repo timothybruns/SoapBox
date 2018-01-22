@@ -77,5 +77,11 @@ Things you may want to cover:
 * Prototype/MVP/Done?
     * MVP is a CRUD app with users/auth using React/Redux/Rails
     * Completed app includes different capablity based on the user
-        * Should also include
+    
+## Works Cited
+
+* BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
+    * Note: had some help from Collin Schneider here, a GA alum, currently working as a backend developer, predominatly using Rails
+
+* 
 
