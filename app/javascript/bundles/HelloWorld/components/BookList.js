@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Books = ({ bookData }) => {
+const BookList = ({ bookData }) => {
     return bookData !== null ? (
       <div className="books">
       <h2> This is book data </h2>
-      <table>
+      <tbody>
         <tr>
           <th>Title</th>
           <th>Author</th>
@@ -20,11 +21,12 @@ const Books = ({ bookData }) => {
             <td>{book.review}</td>
           </tr>
           ))}
-      </table>
+        <Link to="/books/new">Add a book</Link>
+      </tbody>
       </div>
       ) : (
       <p> Loading ... </p>
     );
   };
 
-export default Books;
+export default BookList;

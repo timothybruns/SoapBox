@@ -7,7 +7,7 @@ const Header = () => {
       <h1> SoapBox </h1>
         <ul className="navLinks">
             <li><Link to="/">Home</Link></li>
-            <li id="newBook"><Link to="/books">See all books</Link></li>
+            <li><Link to="/books">See all books</Link></li>
         </ul>
     </div>
     );

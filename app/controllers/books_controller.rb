@@ -1,6 +1,4 @@
 class BooksController < ApplicationController
-
-
   def index
     @books = Book.all
     render json: {
@@ -33,11 +31,15 @@ class BooksController < ApplicationController
     if current_user
       params[:book][:user_id] = current_user.id
     end
-
+    puts book_params
     @book = Book.new(book_params)
 
     if @book.save
-      redirect_to @book
+      render json: {
+        data: {
+          book:@book
+        }
+      }
     else
       render 'new'
     end

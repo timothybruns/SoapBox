@@ -1,5 +1,5 @@
 import React from 'react';
-import Books from './Books'
+import BookList from './BookList'
 
   const Content = ({ bookData }) => {
     return bookData !== null ? (

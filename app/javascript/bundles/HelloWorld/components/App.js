@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
-import Content from './Content';
 import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
 import Home from './Home';
-import Books from './Books';
+import BookList from './BookList';
+import BookForm from './BookForm';
 
 
 export default class App extends React.Component {
@@ -18,20 +18,20 @@ export default class App extends React.Component {
     this.state = {
       retrievedBookData: false,
       bookData: null,
-      // addForm: false,
+      showBookForm: false,
     }
+    this.bookSubmit = this.bookSubmit.bind(this)
   }
 
 componentDidMount() {
   this.getBookData(this.state.retrievedBookData)
-  // this.showAddForm(this.state.addForm)
+  // this.createBook(this.state.createBook)
 }
 
 getBookData() {
   fetch('/books')
   .then(res => res.json())
   .then((res) => {
-    console.log(res)
     this.setState({
       retrievedBookData: true,
       bookData: res.data.books,
@@ -39,33 +39,52 @@ getBookData() {
   })
 }
 
-// showAddForm() {
+// createBook() {
 //   fetch('/books/new')
 //   .then((res) => {
 //     console.log(res)
 //     this.setState({
-//       addForm: true,
+//       showBookForm: true,
 //     })
 //   })
 // }
 
+bookSubmit(event, data) {
+  event.preventDefault();
+  fetch('/books', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+      .then(res => {
+        console.log(res)
+        this.getBookData();
+    });
+}
 
   render() {
     return (
-      <BrowserRouter>
+    <BrowserRouter>
       <div>
         <Header />
         <Home />
-        <main>
-        <Switch>
-        <Route path="/books"
-          render={props => (<Books {...props}
-            bookData={this.state.bookData} />)
-          }/>
-
-        </Switch>
-        </main>
-      </div>
+          <main>
+            <Switch>
+              <Route path="/books"
+                render={props => (<BookList {...props}
+                  bookData={this.state.bookData} />)
+                } exact/>
+              <Route path="/books/new"
+                render={props => (<BookForm {...props}
+                  bookSubmit = {this.bookSubmit}
+                />)
+                }
+              />
+            </Switch>
+          </main>
+        </div>
       </BrowserRouter>
     );
   }
