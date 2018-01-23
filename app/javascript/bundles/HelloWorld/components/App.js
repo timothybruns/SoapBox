@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Content from './Content';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
 import Home from './Home';
 import Books from './Books';
 
@@ -56,7 +56,15 @@ getBookData() {
       <div>
         <Header />
         <Home />
-        <Books />
+        <main>
+        <Switch>
+        <Route path="/books"
+          render={props => (<Books {...props}
+            bookData={this.state.bookData} />)
+          }/>
+
+        </Switch>
+        </main>
       </div>
       </BrowserRouter>
     );
