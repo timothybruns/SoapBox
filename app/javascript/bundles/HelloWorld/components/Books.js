@@ -3,7 +3,7 @@ import React from 'react';
 const Books = (props) => {
   return (
     <div className="bookList">
-      <h2>{props.book.title}</h2>
+      <h2>These are books</h2>
     </div>
     )
 }

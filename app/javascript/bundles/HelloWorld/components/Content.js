@@ -29,17 +29,6 @@ import Books from './Books'
   };
 
 
-// const Content = props => {
-//   console.log({props})
-//   return (
-//     <div className="books">
-//       {props.bookData.map(book, index => {
-//         return
-//           <Books key={book.id} book={book} />
-//       })}
-//     </div>
-//   )
-// }
 
 
 export default Content;

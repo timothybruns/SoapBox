@@ -83,5 +83,5 @@ Things you may want to cover:
 * BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
     * Note: had some help from Collin Schneider here, a GA alum, currently working as a backend developer, predominatly using Rails
 
-* 
+* Render JSON in controller: https://stackoverflow.com/questions/14824551/rendering-json-in-controller
 

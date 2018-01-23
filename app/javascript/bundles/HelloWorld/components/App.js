@@ -3,6 +3,9 @@ import React from 'react';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Content from './Content';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './Home';
+import Books from './Books';
 
 
 export default class App extends React.Component {
@@ -15,7 +18,7 @@ export default class App extends React.Component {
     this.state = {
       retrievedBookData: false,
       bookData: null,
-      addForm: false,
+      // addForm: false,
     }
   }
 
@@ -49,12 +52,13 @@ getBookData() {
 
   render() {
     return (
+      <BrowserRouter>
       <div>
         <Header />
-        <Content
-          bookData={this.state.bookData}
-        />
+        <Home />
+        <Books />
       </div>
+      </BrowserRouter>
     );
   }
 }
