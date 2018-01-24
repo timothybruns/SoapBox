@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
 import Home from './Home';
 import BookList from './BookList';
 import BookForm from './BookForm';
+import Book from './Book';
 
 
 export default class App extends React.Component {
@@ -25,7 +26,6 @@ export default class App extends React.Component {
 
 componentDidMount() {
   this.getBookData(this.state.retrievedBookData)
-  // this.createBook(this.state.createBook)
 }
 
 getBookData() {
@@ -54,27 +54,41 @@ bookSubmit(event, data) {
     });
 }
 
+deleteBook(id) {
+  fetch('/books/:id', {
+    method: 'DELETE',
+  }).then(res => res.json())
+      .then(res => {
+        this.getBlogData();
+    });
+  }
+
   render() {
     return (
     <BrowserRouter>
       <div>
         <Header />
-        <Home />
-          <main>
-            <Switch>
-              <Route path="/books"
-                render={props => (<BookList {...props}
-                  bookData={this.state.bookData} />)
-                } exact/>
-              <Route path="/books/new"
-                render={props => (<BookForm {...props}
-                  bookSubmit = {this.bookSubmit}
-                />)
-                }
-              />
-            </Switch>
-          </main>
-        </div>
+          <Home />
+            <main>
+              <Switch>
+                <Route path="/books"
+                  render={props => (<BookList {...props}
+                    bookData={this.state.bookData} />)
+                  } exact/>
+                <Route path="/books/new"
+                  render={props => (<BookForm {...props}
+                    bookSubmit = {this.bookSubmit}
+                    />)
+                  }/>
+                <Route path="/books/:id"
+                  render={props => (<Book {...props}
+                    bookData={this.state.bookData}
+                    deleteBook = {this.deleteBook}
+                    />)
+                  }/>
+              </Switch>
+            </main>
+          </div>
       </BrowserRouter>
     );
   }

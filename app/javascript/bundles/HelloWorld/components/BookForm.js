@@ -43,7 +43,7 @@ render() {
             <br />
           <input className="submitGenre" type="text" name="genre" value={this.state.genre} placeholder="genre" onChange={this.handleChange} />
             <br/>
-          <textarea className="submitReview" type="text" name="review" value={this.state.review} placeholder="review" onChange={this.handleChange} />
+          <textarea className="submitReview" type="textarea" name="review" value={this.state.review} placeholder="review" onChange={this.handleChange} />
         </label>
           <br />
         <input className="submitButton" type="submit" value="Submit" />

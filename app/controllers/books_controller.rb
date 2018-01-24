@@ -6,13 +6,6 @@ class BooksController < ApplicationController
         books: @books
       }
     }
-    # respond_to do |format|
-    #   format.json: {
-    #     data: {
-    #       books: @books
-    #     }
-    #   }
-    # end
   end
 
   def show

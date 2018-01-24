@@ -14,8 +14,22 @@
  *= require_self
  */
 
-/*table {
-  padding: 10px
-}*/
+table {
+  padding: 10px;
+}
 
-@import 'bootstrap-custom';
+body {
+  background-color: cyan;
+}
+
+h1 .logo {
+  font-family: helvetica;
+}
+
+// @import 'bootstrap-custom';
+
+
+
+
+
+
