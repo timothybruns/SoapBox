@@ -39,16 +39,6 @@ getBookData() {
   })
 }
 
-// createBook() {
-//   fetch('/books/new')
-//   .then((res) => {
-//     console.log(res)
-//     this.setState({
-//       showBookForm: true,
-//     })
-//   })
-// }
-
 bookSubmit(event, data) {
   event.preventDefault();
   fetch('/books', {

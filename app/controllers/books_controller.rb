@@ -37,7 +37,7 @@ class BooksController < ApplicationController
     if @book.save
       render json: {
         data: {
-          book:@book
+          book: @book
         }
       }
     else
