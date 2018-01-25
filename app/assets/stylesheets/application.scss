@@ -27,6 +27,7 @@ body {
 }
 
 .bookCircle {
+  display: inline-block;
   border-radius: 50%;
   box-shadow: 0 5px 10px rgba(55,55,55,.25);
   color: #fff;
@@ -43,6 +44,51 @@ body {
   position: relative;
   top: 40%
   }
+}
+
+.articleCircle {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(55,55,55,.25);
+  color: #fff;
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  transition: ease 400ms;
+  text-align: center;
+  top: 50%;
+  color: black;
+  background-color: blue;
+
+  .innerText {
+  position: relative;
+  top: 40%
+  }
+}
+
+.podcastCircle {
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(55,55,55,.25);
+  color: #fff;
+  text-decoration: none;
+  width: 200px;
+  height: 200px;
+  transition: ease 400ms;
+  text-align: center;
+  top: 50%;
+  color: black;
+  background-color: green;
+
+  .innerText {
+  position: relative;
+  top: 40%
+  }
+}
+
+.navLinks {
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 td, th {

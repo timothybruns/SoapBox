@@ -7,7 +7,7 @@ const BookReview = (props) => {
   return (
     <div className="bookReview">
       <h1> This is a Book Review </h1>
-        <p>{props.bookData[0].title}</p>
+        <p>{props.bookData[0].review}</p>
     </div>
   );
 };

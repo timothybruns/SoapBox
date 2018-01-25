@@ -80,6 +80,8 @@ Things you may want to cover:
     
 ## Works Cited
 
+* Webpacker: https://github.com/shakacode/react_on_rails
+
 * BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
     * Note: had some help from Collin Schneider here, a GA alum, currently working as a backend developer, predominatly using Rails
 
