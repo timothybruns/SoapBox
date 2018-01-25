@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Header from './Header';
-import Dashboard from './Dashboard';
+// import Dashboard from './Dashboard';
 import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
 import Home from './Home';
 import BookList from './BookList';
 import BookForm from './BookForm';
 import Book from './Book';
+import BookReview from './BookReview';
 
 
 export default class App extends React.Component {
-  static propTypes = {
-    // name: PropTypes.string.isRequired, // this is passed from the Rails view
-  };
+  // static propTypes = {
+  //   name: PropTypes.string.isRequired, // this is passed from the Rails view
+  // };
 
   constructor(props) {
     super(props);
@@ -29,9 +30,10 @@ componentDidMount() {
 }
 
 getBookData() {
-  fetch('/books')
+  fetch('/api/books')
   .then(res => res.json())
   .then((res) => {
+    // console.log('hi')
     this.setState({
       retrievedBookData: true,
       bookData: res.data.books,
@@ -41,7 +43,7 @@ getBookData() {
 
 bookSubmit(event, data) {
   event.preventDefault();
-  fetch('/books', {
+  fetch('/api/books', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -49,13 +51,28 @@ bookSubmit(event, data) {
     body: JSON.stringify(data)
   }).then(res => res.json())
       .then(res => {
-        console.log(res)
+        // console.log(res)
         this.getBookData();
     });
 }
 
+editBook(e, data, id) {
+  e.preventDefault();
+  fetch(`/api/books/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+    .then(res => {
+      this.getBookData();
+    });
+}
+
+
 deleteBook(id) {
-  fetch('/books/:id', {
+  fetch(`/api/books/${id}`, {
     method: 'DELETE',
   }).then(res => res.json())
       .then(res => {
@@ -81,9 +98,10 @@ deleteBook(id) {
                     />)
                   }/>
                 <Route path="/books/:id"
-                  render={props => (<Book {...props}
+                  render={props => (<BookReview currentId={props.match.params.id}
                     bookData={this.state.bookData}
                     deleteBook = {this.deleteBook}
+                    editBook = {this.editBook}
                     />)
                   }/>
               </Switch>

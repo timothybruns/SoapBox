@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
-  resources :books
+  namespace :api do
+    resources :books
+  end
+
 
   root 'welcome#index'
 

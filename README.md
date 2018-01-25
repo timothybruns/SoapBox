@@ -85,3 +85,8 @@ Things you may want to cover:
 
 * Render JSON in controller: https://stackoverflow.com/questions/14824551/rendering-json-in-controller
 
+* CSS/styling inspiration: 
+    * https://getbootstrap.com/docs/3.3/examples/dashboard/
+    * https://codepen.io/samanthasquared/pen/bYeOGY
+    * Note: had some help from Yanina as well
+

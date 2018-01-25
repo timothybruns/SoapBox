@@ -1,13 +1,26 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Book = ({ bookData }) => {
+
+const Book = (props) => {
+  // console.log(props)
   return (
-    <div className="home">
-        <h2> This is a book </h2>
+    <div className="book">
+          <table>
+            <tbody>
+              <td>{props.book.title}</td>
+              <td>{props.book.author}</td>
+              <td>{props.book.genre}</td>
+              <td><Link to={`/books/${props.book.id}`}>See Review</Link></td>
+            </tbody>
+          </table>
     </div>
     )
   };
+
+export default Book;
+
 
 // class Book extends React.Component {
 //   constructor(props){
@@ -89,4 +102,3 @@ const Book = ({ bookData }) => {
     // </div>
 
 
-export default Book;

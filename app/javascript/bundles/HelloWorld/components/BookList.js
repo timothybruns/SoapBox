@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Book from './Book';
+import BookReview from './BookReview'
 
 const BookList = ({ bookData }) => {
     return bookData !== null ? (
@@ -7,20 +9,13 @@ const BookList = ({ bookData }) => {
       <h2> Bookshelf </h2>
         <table>
           <tbody>
-            <tr>
               <th>Title</th>
               <th>Author</th>
               <th>Genre</th>
               <th>Review</th>
               <th colSpan="4"></th>
-            </tr>
             {bookData.map((book, index) => (
-              <tr key={index}>
-                <td><Link to="/books/:id">{book.title}</Link></td>
-                <td>{book.author}</td>
-                <td>{book.genre}</td>
-                <td>{book.review}</td>
-              </tr>
+                <tr><Book key={index} book={book} /></tr>
               ))}
           </tbody>
         </table>
