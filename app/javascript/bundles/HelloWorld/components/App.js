@@ -85,7 +85,7 @@ deleteBook(id) {
     <BrowserRouter>
       <div>
         <Header />
-          <Home />
+
             <main>
               <Switch>
                 <Route path="/books"

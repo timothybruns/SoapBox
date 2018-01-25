@@ -25,6 +25,7 @@ const BookList = ({ bookData }) => {
               ))}
             </tbody>
           </table>
+          <br/>
         <Link to="/books/new">Add a book</Link>
       </div>
       ) : (

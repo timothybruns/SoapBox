@@ -19,7 +19,7 @@ table {
 }
 
 body {
-  background-color: cyan;
+  background-color: red;
 }
 
 .logo {
@@ -31,20 +31,29 @@ body {
   box-shadow: 0 5px 10px rgba(55,55,55,.25);
   color: #fff;
   text-decoration: none;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   transition: ease 400ms;
   text-align: center;
   top: 50%;
   color: black;
+  background-color: green;
 
   .innerText {
-  position: absolute;
-  top: 21%;
-  left: 9%;
+  position: relative;
+  top: 40%
   }
 }
 
+td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.header {
+  background-color: #E8E8E8;
+}
 
 @import 'bootstrap-custom';
 

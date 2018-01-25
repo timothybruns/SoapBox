@@ -93,3 +93,5 @@ Things you may want to cover:
 * Namespace: https://devblast.com/b/namespace-controllers-rails
     * Note: help from Kate here!
 
+* HTML/CSS tables: https://css-tricks.com/complete-guide-table-element/
+
