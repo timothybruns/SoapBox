@@ -1,25 +1,24 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+// import React from 'react';
+// import { Redirect } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
-const Book = (props) => {
-  // console.log(props)
-  return (
-    <div className="book">
-          <table>
-            <tbody>
-              <td>{props.book.title}</td>
-              <td>{props.book.author}</td>
-              <td>{props.book.genre}</td>
-              <td><Link to={`/books/${props.book.id}`}>See Review</Link></td>
-            </tbody>
-          </table>
-    </div>
-    )
-  };
+// const Book = (props) => {
+//   // console.log(props)
+//   return (
+//     <div className="book">
+//             <tbody>
+//               <tr>
+//                 <td><Link to={`/books/${props.book.id}`}>{props.book.title}</Link></td>
+//                 <td>{props.book.author}</td>
+//                 <td>{props.book.genre}</td>
+//               </tr>
+//             </tbody>
+//     </div>
+//     )
+//   };
 
-export default Book;
+// export default Book;
 
 
 // class Book extends React.Component {

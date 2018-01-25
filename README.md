@@ -90,3 +90,6 @@ Things you may want to cover:
     * https://codepen.io/samanthasquared/pen/bYeOGY
     * Note: had some help from Yanina as well
 
+* Namespace: https://devblast.com/b/namespace-controllers-rails
+    * Note: help from Kate here!
+
