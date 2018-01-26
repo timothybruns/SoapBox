@@ -1,26 +1,10 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "modules": false,
-        "targets": {
-          "browsers": "> 1%",
-          "uglify": true
-        },
-        "useBuiltIns": true
-      }
-    ],
-    "react"
-  ],
+  "presets" : ["es2015", "react", "stage-0", "stage-1"],
+  "compact" : true,
   "plugins": [
-    "syntax-dynamic-import",
-    "transform-object-rest-spread",
-    [
-      "transform-class-properties",
-      {
-        "spec": true
-      }
-    ]
+    ["transform-object-rest-spread"],
+    ["transform-strict-mode", {
+      "strict": true
+    }]
   ]
 }
