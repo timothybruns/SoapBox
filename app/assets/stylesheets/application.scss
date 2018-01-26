@@ -19,7 +19,7 @@ table {
 }
 
 body {
-  background-color: red;
+  background-color: green;
 }
 
 .logo {
@@ -99,6 +99,18 @@ td, th {
 
 .header {
   background-color: #E8E8E8;
+}
+
+.booklist {
+  padding: 20px;
+}
+
+.articles {
+  padding: 20px;
+}
+
+.podcasts {
+  padding: 20px;
 }
 
 @import 'bootstrap-custom';

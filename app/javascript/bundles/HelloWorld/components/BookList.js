@@ -6,7 +6,7 @@ import BookReview from './BookReview'
 const BookList = ({ bookData }) => {
     return bookData !== null ? (
       <div className="booklist">
-        <h2> Bookshelf </h2>
+        <h1> Bookshelf </h1>
           <table>
             <thead>
               <tr>

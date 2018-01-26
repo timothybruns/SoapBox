@@ -8,6 +8,8 @@ import BookList from './BookList';
 import BookForm from './BookForm';
 import Book from './Book';
 import BookReview from './BookReview';
+import ArticlesList from './ArticlesList';
+import PodcastList from './PodcastList';
 
 
 export default class App extends React.Component {
@@ -85,7 +87,6 @@ deleteBook(id) {
     <BrowserRouter>
       <div>
         <Header />
-
             <main>
               <Switch>
                 <Route path="/books"
@@ -104,6 +105,8 @@ deleteBook(id) {
                     editBook = {this.editBook}
                     />)
                   }/>
+                <Route path="/articles" component={ArticlesList}/>
+                <Route path="/podcasts" component={PodcastList}/>
               </Switch>
             </main>
           </div>
