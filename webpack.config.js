@@ -20,7 +20,7 @@ if (!('NODE_ENV' in process.env)) require('dotenv').config();
 const config = {
   entry: {
     main: `${APP_DIR}/main.jsx`,
-    vendor: ['react', 'react-dom', 'prop-types', 'bootstrap'],
+    vendor: ['react', 'react-dom', 'prop-types'],
   },
   output: {
     filename: 'js/[name].js',
