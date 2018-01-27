@@ -26,9 +26,7 @@ const BookList = ({ bookData }) => {
             </tbody>
           </table>
           <br/>
-          <tfoot>
             <Link to="/books/new">Add a book</Link>
-          </tfoot>
       </div>
       ) : (
       <p> Loading ... </p>

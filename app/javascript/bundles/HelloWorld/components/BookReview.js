@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import BookList from './BookList';
 
 const BookReview = (props) => {
-  console.log(props.bookData.filter(book => book.id == id))
-  console.log(props)
+  console.log(props.bookData.filter(book => book.id == 5))
+  // console.log(props)
   debugger;
   return (
     <div className="bookReview">
