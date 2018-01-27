@@ -22,10 +22,10 @@ module Api
     end
 
     def create
-      if current_user
-        params[:book][:user_id] = current_user.id
-      end
-      puts book_params
+      # if current_user
+      #   params[:book][:user_id] = current_user.id
+      # end
+      # puts book_params
       @book = Book.new(book_params)
 
       if @book.save
