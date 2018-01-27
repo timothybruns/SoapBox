@@ -11,6 +11,11 @@ module Api
 
     def show
       @book = Book.find(params[:id])
+      render json: {
+        data: {
+          books: @books
+        }
+      }
     end
 
     def new
@@ -19,6 +24,11 @@ module Api
 
     def edit
       @book = Book.find(params[:id])
+      render json: {
+        data: {
+          books: @books
+        }
+      }
     end
 
     def create

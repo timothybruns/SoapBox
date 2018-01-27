@@ -35,7 +35,6 @@ getBookData() {
   fetch('/api/books')
   .then(res => res.json())
   .then((res) => {
-    // console.log('hi')
     this.setState({
       retrievedBookData: true,
       bookData: res.data.books,
