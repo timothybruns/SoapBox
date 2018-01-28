@@ -42,6 +42,7 @@ getBookData() {
   })
 }
 
+
 bookSubmit(event, data) {
   event.preventDefault();
   fetch('/api/books', {
