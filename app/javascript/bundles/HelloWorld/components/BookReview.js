@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import BookList from './BookList';
 
 // const BookReview = (props) => {
@@ -18,8 +18,6 @@ import BookList from './BookList';
 //   );
 // };
 
-
-
 class BookReview extends React.Component {
   constructor(props) {
     super(props);
@@ -28,20 +26,17 @@ class BookReview extends React.Component {
       id: null,
       title: '',
       review: '',
+      deleted: false,
     };
+      this.handleDelete = this.handleDelete.bind(this);
   }
 
-    componentDidMount() {
-      this.showReview();
-    }
 
-    showReview() {
-      // console.log(this.props)
+    componentDidMount() {
       const bookData = this.props.bookData
       const findBook = (id) =>  bookData.filter(book => book.id == id)
       const id = this.props.currentId
       const book = findBook(id)
-      console.log(book)
         this.setState({
           book: book,
           id: book[0].id,
@@ -50,16 +45,26 @@ class BookReview extends React.Component {
         })
       }
 
-      render() {
-          return (
-            <div className="review">
-              <h1>This is a review</h1>
-              <h1>{this.state.review}</h1>
-            </div>
-        )
-    }
-}
 
+    handleDelete(e) {
+      e.preventDefault();
+      {this.props.deleteBook(this.state.id)}
+      this.setState({
+        deleted: true,
+      })
+    }
+
+    render() {
+        return (
+          <div className="review">
+            <h1>{this.state.title}</h1>
+            <h1>{this.state.review}</h1>
+            <button className="delete" onClick={this.handleDelete}> Delete </button>
+            <button className="edit"> Edit </button>
+          </div>
+          );
+      }
+}
 
 export default BookReview;
 

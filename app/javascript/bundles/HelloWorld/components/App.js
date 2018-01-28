@@ -22,9 +22,11 @@ export default class App extends React.Component {
     this.state = {
       retrievedBookData: false,
       bookData: null,
-      showBookForm: false,
+      // showBookForm: false,
     }
-    this.bookSubmit = this.bookSubmit.bind(this)
+    this.bookSubmit = this.bookSubmit.bind(this);
+    this.deleteBook = this.deleteBook.bind(this);
+    this.editBook = this.editBook.bind(this);
   }
 
 componentDidMount() {
@@ -77,10 +79,12 @@ deleteBook(id) {
   fetch(`/api/books/${id}`, {
     method: 'DELETE',
   }).then(res => res.json())
-      .then(res => {
-        this.getBlogData();
+    .then(res => {
+        this.getBookData();
     });
   }
+
+
 
   render() {
     return (
