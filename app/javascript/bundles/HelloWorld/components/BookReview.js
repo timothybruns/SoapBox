@@ -27,8 +27,12 @@ class BookReview extends React.Component {
       title: '',
       review: '',
       deleted: false,
+      // editButtonClick: false,
     };
       this.handleDelete = this.handleDelete.bind(this);
+      // this.handleEdit = this.handleEdit.bind(this);
+      // this.handleChange = this.handleChange.bind(this);
+      // this.showEditForm = this.showEditForm.bind(this);
   }
 
 
@@ -54,16 +58,35 @@ class BookReview extends React.Component {
       })
     }
 
+    // handleChange(e) {
+    //   const name = e.target.name;
+    //   const val = e.target.value;
+    //   this.setState({
+    //     [name]: val,
+    //   });
+    // }
+
+    // showEditForm() {
+    //   this.setState({
+    //     editButtonClick: true,
+    //   });
+    // }
+
+    // handleEdit(e) {
+    //   e.preventDefault();
+    //     {this.props.editBook(e, this.state, this.state.id)}
+    // }
+
     render() {
         return (
-          <div className="review">
-            <h1>{this.state.title}</h1>
-            <h1>{this.state.review}</h1>
-            <button className="delete" onClick={this.handleDelete}> Delete </button>
-            <button className="edit"> Edit </button>
-          </div>
-          );
-      }
+            <div className="review">
+              <h1>{this.state.title}</h1>
+              <h1>{this.state.review}</h1>
+              <br/>
+              <button className="delete" onClick={this.handleDelete}> Delete </button>
+            </div>
+        )
+    }
 }
 
 export default BookReview;
