@@ -39,6 +39,11 @@ const ArticlesList = () => {
                   <td>CNN</td>
                   <td>Politics</td>
                 </tr>
+                <tr>
+                  <td>"Dr Pepper Snapple to Merge With Keurig Green Mountain"</td>
+                  <td>The Wall Street Journal</td>
+                  <td>Finance</td>
+                </tr>
             </tbody>
         </table>
     </div>

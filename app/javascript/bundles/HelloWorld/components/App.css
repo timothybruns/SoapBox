@@ -168,6 +168,8 @@ td {
 
 .topbar {
   background-color: black;
+  padding: 0px;
+  margin: 0px;
 }
 
 .pull-right {
