@@ -24,6 +24,21 @@ const ArticlesList = () => {
                     <td>freeCodeCamp</td>
                     <td>Tech</td>
                 </tr>
+                <tr>
+                  <td>"The new XFL is going to have several major and surprising differences from the first iteration"</td>
+                  <td>Business Insider</td>
+                  <td>Sports</td>
+                </tr>
+                <tr>
+                  <td>"Why 68% of people would rather talk about their weight than money"</td>
+                  <td>Moneyish.com</td>
+                  <td>Lifestyle</td>
+                </tr>
+                <tr>
+                  <td>"Gary Cohn: Trump shared a vision of economic progress in Davos"</td>
+                  <td>CNN</td>
+                  <td>Politics</td>
+                </tr>
             </tbody>
         </table>
     </div>

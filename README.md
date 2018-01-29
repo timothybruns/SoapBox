@@ -31,8 +31,23 @@
 
 ## Technologies/Dependencies Used
 
+* React.js, React Router (frontend)
+* Ruby on Rails (backend)
+* Webpacker (Jason Seminara)
+* HTML/CSS
+* Bootstrap
+* Heroku
+* PSQL
+* MVC Pattern
+* Active Record
+* Github
+* See package.json for all dependencies/nodules used
+* See Gemfile for all Gems used
+
 ## Wireframes & User Stories
 
+* Wireframes: https://git.generalassemb.ly/tbruns3/Final-P4/blob/master/SoapBox%20wireframes.pdf
+* User Stories: https://git.generalassemb.ly/tbruns3/Final-P4/projects/1
 
 ## Rough Project Proposal
 
@@ -59,6 +74,11 @@
 
 ## Final Thoughts and Challenges
 
+* Overall, I found this project to be the most difficult to handle - big surprise. I set out to build a social media application (meaning multiple users) using Rails on the backend, React on the frontend, and managing state using Redux, a technology I had not seen or experimented with before. In addition, I thought I could try incorporating Bootstrap for my CSS, given the poor designs of other applications I had built. Given the ease of getting a CRUD app going with Rails, my relative comfort with React, and my aspiration to learn Redux, I thought I had set ambitious but attainable goals, given the deadline.
+
+* After spending 2 days of focused learning and practicing with Redux from several sources, I began to have a fundamental understanding of the technology, but with no real concept of how to implement it in the scope of my project. During this learning period, I was not able to adequately plan out my application, which affected in me in more ways than one. Days had passed and I needed to "pull the ripcord" on learning Redux. I began thinking about SoapBox as an app that set state purely with React, and started building out routes and models with Rails.
+
+* Soon after did I realize that my skipped planning phase did not allow me to forecast for obvious problems. All webpack issues aside (as we all know, there were PLENTY), using React on Rails was new to me, the application was extremely model heavy, and my idea at its core was sort of boring to work with. I ended up zig zagging my way to the finish line (which by the way is not even close to "finished") instead of the straight-line approach. I piecemealed my way through the building of the React components and became aware that I needed a lot more practice with React and simple Javascript if I was to ever complete this application. Overall, I learned a TON through ultimately failing and decided that if I could go back, I would change 2 things. One would be come up with a more creative, and simple idea - aka not another CRUD app! The other would be to PLAN BETTER - I definitely took a step back in my ability to plan and got away from my normal routine, which had proved to work well in past projects. 
     
 ## Works Cited
 
@@ -66,7 +86,7 @@
     * This was the original Webpacker used to serve up React on Rails, which was reconfigured with guidance from Jason Seminara and Kate Shishkina
 
 * BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
-    * Note: had some help from Collin Schneider here, a GA alum, currently working as a backend developer, predominatly using Rails
+    * Note: had some help from Collin Schneider on this (GA alum/Rails developer)
     * This was a feature that was lost upon webpacker reconfig, but appears in older commits
 
 * Render JSON in controller: https://stackoverflow.com/questions/14824551/rendering-json-in-controller
@@ -74,6 +94,7 @@
 * CSS/styling inspiration: 
     * https://getbootstrap.com/docs/3.3/examples/dashboard/
     * https://codepen.io/samanthasquared/pen/bYeOGY
+    * https://www.w3.org/Style/Examples/007/evenodd.en.html
     * Note: had some help from Yanina!
 
 * Namespace: https://devblast.com/b/namespace-controllers-rails
@@ -81,9 +102,15 @@
 
 * HTML/CSS tables: https://css-tricks.com/complete-guide-table-element/
 
-* David
-    * Stand-up buddy, naming, and general trouble-shooting
+* Resources I used during my attempt at Redux
+    * https://www.fullstackreact.com/ (Book)
+    * https://learnredux.com/ (Wes Bos tutorial)
 
-* Luke
-    * Stand-up buddy, and general trouble-shootin
+* David Azaria
+    * Stand-up buddy, app naming, and general trouble-shooting
+
+* Luke McDonald/Danny Graugnard
+    * Stand-up buddies, and general trouble-shooting
+
+
 

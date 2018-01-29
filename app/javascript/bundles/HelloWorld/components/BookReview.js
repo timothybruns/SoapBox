@@ -80,9 +80,8 @@ class BookReview extends React.Component {
     render() {
         return (
             <div className="review">
-            <h1>Reviews </h1>
-              <h1>{this.state.title}</h1>
-              <h1>{this.state.review}</h1>
+              <h2>{this.state.title}</h2>
+              <p>{this.state.review}</p>
               <br/>
               <button className="delete" onClick={this.handleDelete}> Delete </button>
             </div>

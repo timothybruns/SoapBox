@@ -28,18 +28,50 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
-*,
+/**,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box; }*/
 
 table {
   padding: 10px;
   border-collapse: collapse;
 }
 
+th {
+  background: #FFF
+}
+
+tr:nth-child(even) {
+  background: #CCC
+}
+
+tr:nth-child(odd) {
+  background: #FFF
+}
+
 .logo {
   font-family: arial;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.podcasts {
+  padding: 30px;
+}
+
+.booklist {
+  padding: 30px;
+}
+
+.articles {
+  padding: 30px;
+}
+
+.review {
+  padding: 30px;
 }
 
 .bookCircle {
@@ -48,17 +80,22 @@ table {
   box-shadow: 0 5px 10px rgba(55,55,55,.25);
   color: #fff;
   text-decoration: none;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   transition: ease 400ms;
   text-align: center;
+  line-height: 250px;
   top: 50%;
   color: black;
   background-color: green;
+  font-size: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
 
   .innerText {
   position: relative;
-  top: 40%
+  top: 50%;
   }
 }
 
@@ -68,13 +105,17 @@ table {
   box-shadow: 0 5px 10px rgba(55,55,55,.25);
   color: #fff;
   text-decoration: none;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   transition: ease 400ms;
   text-align: center;
+  line-height: 250px;
   top: 50%;
   color: black;
   background-color: blue;
+  font-size: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
 
   .innerText {
   position: relative;
@@ -88,13 +129,17 @@ table {
   box-shadow: 0 5px 10px rgba(55,55,55,.25);
   color: #fff;
   text-decoration: none;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   transition: ease 400ms;
   text-align: center;
+  line-height: 250px;
   top: 50%;
   color: black;
   background-color: green;
+  font-size: 45px;
+  font-family: sans-serif;
+  text-transform: uppercase;
 
   .innerText {
   position: relative;
@@ -221,7 +266,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: gray;
+  color: steelblue;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -378,7 +423,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -389,8 +434,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem; }
 
-h2, .h2 {
-  font-size: 2rem; }
+/*h2, .h2 {
+  font-size: 2rem; }*/
 
 h3, .h3 {
   font-size: 1.75rem; }
