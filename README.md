@@ -1,8 +1,8 @@
 # Final Project
 
+## Heroku link: 
+
 ## The Problem
-
-
 
 * The content which we ingest and broadcast online as a means to market ourselves is scattered among many social media applications. "Clever Name" application seeks to solve this problem as a centralized social media app that curates the content you'd like to broadcast and provide perspective on for your professional audience.
 
@@ -27,11 +27,16 @@
     * Using Ruby on Rails with React - will require a Gem file, which I've never done this before
         * Am I setting routes with Rails or React Router?
 
-* At its core, this application is CRUD with auth, but with the intention of tapping into a purely professional audience.
+* At its core, this application is CRUD with auth, but with the intention of tapping into a purely professional/influential audience.
 
-## Proposal
+## Technologies/Dependencies Used
 
-* Cost - $75/hr while a Sprint is in progress
+## Wireframes & User Stories
+
+
+## Rough Project Proposal
+
+* Cost - $75/hr while a Sprint is in progress (modified in propsal to Johnny Appleseed ;) )
 
 * Time - will have a functioning application on 1/29
 
@@ -50,23 +55,35 @@
 * Prototype/MVP/Done?
     * MVP is a CRUD app with users/auth using React/Redux/Rails
     * Completed app includes different capablity based on the user
+
+
+## Final Thoughts and Challenges
+
     
 ## Works Cited
 
 * Webpacker: https://github.com/shakacode/react_on_rails
+    * This was the original Webpacker used to serve up React on Rails, which was reconfigured with guidance from Jason Seminara and Kate Shishkina
 
 * BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
     * Note: had some help from Collin Schneider here, a GA alum, currently working as a backend developer, predominatly using Rails
+    * This was a feature that was lost upon webpacker reconfig, but appears in older commits
 
 * Render JSON in controller: https://stackoverflow.com/questions/14824551/rendering-json-in-controller
 
 * CSS/styling inspiration: 
     * https://getbootstrap.com/docs/3.3/examples/dashboard/
     * https://codepen.io/samanthasquared/pen/bYeOGY
-    * Note: had some help from Yanina as well
+    * Note: had some help from Yanina!
 
 * Namespace: https://devblast.com/b/namespace-controllers-rails
     * Note: help from Kate here!
 
 * HTML/CSS tables: https://css-tricks.com/complete-guide-table-element/
+
+* David
+    * Stand-up buddy, naming, and general trouble-shooting
+
+* Luke
+    * Stand-up buddy, and general trouble-shootin
 

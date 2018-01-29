@@ -80,7 +80,7 @@ class BookReview extends React.Component {
     render() {
         return (
             <div className="review">
-            <h1>Review corner</h1>
+            <h1>Reviews </h1>
               <h1>{this.state.title}</h1>
               <h1>{this.state.review}</h1>
               <br/>
