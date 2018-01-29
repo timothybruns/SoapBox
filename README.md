@@ -1,6 +1,9 @@
-# Final Project
+# Final Project - SoapBox
 
-## Heroku link: 
+## Heroku link:
+
+* https://soapbox-wdi.herokuapp.com/
+* Note: data call currently not working on deployed app
 
 ## The Problem
 
