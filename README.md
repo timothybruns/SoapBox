@@ -3,7 +3,6 @@
 ## Heroku link:
 
 * https://soapbox-wdi.herokuapp.com/
-* Note: data call currently not working on deployed app
 
 ## The Problem
 
