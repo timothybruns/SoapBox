@@ -29,7 +29,9 @@ const BookList = ({ bookData }) => {
             <Link to="/books/new">Add a book</Link>
       </div>
       ) : (
-      <p> Loading ... </p>
+      <div className="loading">
+        <p> Loading ... </p>
+      </div>
     );
   };
 
