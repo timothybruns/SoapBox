@@ -84,8 +84,8 @@
     
 ## Works Cited
 
-* Webpacker: https://github.com/shakacode/react_on_rails
-    * This was the original Webpacker used to serve up React on Rails, which was reconfigured with guidance from Jason Seminara and Kate Shishkina
+* Webpack: https://github.com/shakacode/react_on_rails
+    * This was the original Webpack used to serve up React on Rails, which was reconfigured with guidance from Jason Seminara and Kate Shishkina
 
 * BCrypt Session Auth: https://gist.github.com/thebucknerlife/10090014
     * Note: had some help from Collin Schneider on this (GA alum/Rails developer)
