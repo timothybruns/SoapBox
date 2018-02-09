@@ -6,9 +6,9 @@ const Header = () => {
     <div className="header">
       <div className="topbar">
         <div className="logo">
-          <Link to="/"><h1> SoapBox</h1> </Link>
+          <Link to="/"><h1> SoapBox </h1> </Link>
             <div className="pull-right">
-              <a> Logout </a>
+              <a> Rogout </a>
               <input type="search-bar" class="searchTerm" placeholder="Search"></input>
               <input type="submit"></input>
               </div>
