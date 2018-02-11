@@ -1,19 +1,28 @@
 module Api
   class BooksController < ApplicationController
     def index
-      @books = Book.all
-      render json: {
-        data: {
-          books: @books
+      # byebug
+      # current_user = User.find(1)
+      # if current_user.nil?
+        render json: {
+          data: {
+            books: Book.all
+          }
         }
-      }
+      # else
+      #   render json: {
+      #     data: {
+      #       books: current_user.books
+      #     }
+      #   }
+      # end
     end
 
     def show
       @book = Book.find(params[:id])
       render json: {
         data: {
-          books: @books
+          books: @book
         }
       }
     end

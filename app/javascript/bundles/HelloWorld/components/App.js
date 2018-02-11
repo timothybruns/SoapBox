@@ -30,6 +30,7 @@ export default class App extends React.Component {
     this.deleteBook = this.deleteBook.bind(this);
     this.editBook = this.editBook.bind(this);
     this.userLogin = this.userLogin.bind(this);
+    this.getBooks = this.getBookData.bind(this);
   }
 
 componentDidMount() {
@@ -47,7 +48,9 @@ userLogin(event, data) {
     body: JSON.stringify(data)
   }).then(res => res.json())
       .then(res => {
+        console.log(res);
         if (res.success) {
+          this.getBookData();
           this.setState({
             userId: res.user_id,
           })
@@ -59,6 +62,10 @@ userLogin(event, data) {
 
 
 getBookData() {
+  // var data = { "user_id": this.state.userId }
+  // fetch('/api/books', {
+  //   body: JSON.stringify(data)
+  // })
   fetch('/api/books')
   .then(res => res.json())
   .then((res) => {
@@ -115,9 +122,7 @@ deleteBook(id) {
     <BrowserRouter>
       <div>
         <Header />
-        <Login
-          userLogin={this.userLogin}
-        />
+
             <main>
               <Switch>
                 <Route path="/books"
