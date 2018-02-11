@@ -10,6 +10,7 @@ import Book from './Book';
 import BookReview from './BookReview';
 import ArticlesList from './ArticlesList';
 import PodcastList from './PodcastList';
+import Login from './Login'
 
 
 export default class App extends React.Component {
@@ -22,16 +23,40 @@ export default class App extends React.Component {
     this.state = {
       retrievedBookData: false,
       bookData: null,
+      userId: null,
       // showBookForm: false,
     }
     this.bookSubmit = this.bookSubmit.bind(this);
     this.deleteBook = this.deleteBook.bind(this);
     this.editBook = this.editBook.bind(this);
+    this.userLogin = this.userLogin.bind(this);
   }
 
 componentDidMount() {
   this.getBookData(this.state.retrievedBookData)
 }
+
+
+userLogin(event, data) {
+  console.log(data)
+  fetch('/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+      .then(res => {
+        if (res.success) {
+          this.setState({
+            userId: res.user_id,
+          })
+        } else {
+          alert('Login failed you piece of shit!')
+        }
+  });
+}
+
 
 getBookData() {
   fetch('/api/books')
@@ -43,7 +68,6 @@ getBookData() {
     });
   })
 }
-
 
 bookSubmit(event, data) {
   event.preventDefault();
@@ -91,6 +115,9 @@ deleteBook(id) {
     <BrowserRouter>
       <div>
         <Header />
+        <Login
+          userLogin={this.userLogin}
+        />
             <main>
               <Switch>
                 <Route path="/books"
