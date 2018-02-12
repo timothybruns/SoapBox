@@ -52,6 +52,7 @@ class BookReview extends React.Component {
 
     handleDelete(e) {
       e.preventDefault();
+      console.log(id);
       {this.props.deleteBook(this.state.id)}
       this.setState({
         deleted: true,

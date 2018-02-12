@@ -10,7 +10,7 @@ import Book from './Book';
 import BookReview from './BookReview';
 import ArticlesList from './ArticlesList';
 import PodcastList from './PodcastList';
-import Login from './Login'
+// import Login from './Login'
 
 
 export default class App extends React.Component {
@@ -29,8 +29,8 @@ export default class App extends React.Component {
     this.bookSubmit = this.bookSubmit.bind(this);
     this.deleteBook = this.deleteBook.bind(this);
     this.editBook = this.editBook.bind(this);
-    this.userLogin = this.userLogin.bind(this);
-    this.getBooks = this.getBookData.bind(this);
+    // this.userLogin = this.userLogin.bind(this);
+    // this.getBooks = this.getBookData.bind(this);
   }
 
 componentDidMount() {
@@ -38,37 +38,34 @@ componentDidMount() {
 }
 
 
-userLogin(event, data) {
-  console.log(data)
-  fetch('/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data)
-  }).then(res => res.json())
-      .then(res => {
-        console.log(res);
-        if (res.success) {
-          this.getBookData();
-          this.setState({
-            userId: res.user_id,
-          })
-        } else {
-          alert('Login failed you piece of shit!')
-        }
-  });
-}
+// userLogin(event, data) {
+//   console.log(data)
+//   fetch('/login', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(data)
+//   }).then(res => res.json())
+//       .then(res => {
+//         console.log(res);
+//         if (res.success) {
+//           this.getBookData();
+//           this.setState({
+//             userId: res.user_id,
+//           })
+//         } else {
+//           alert('Login failed!')
+//         }
+//   });
+// }
 
 
 getBookData() {
-  // var data = { "user_id": this.state.userId }
-  // fetch('/api/books', {
-  //   body: JSON.stringify(data)
-  // })
   fetch('/api/books')
   .then(res => res.json())
   .then((res) => {
+    // debugger
     this.setState({
       retrievedBookData: true,
       bookData: res.data.books,
@@ -116,13 +113,11 @@ deleteBook(id) {
   }
 
 
-
   render() {
     return (
     <BrowserRouter>
       <div>
         <Header />
-
             <main>
               <Switch>
                 <Route path="/books"
