@@ -84,7 +84,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: blue;
-  background-color: limegreen;
+  background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -134,7 +134,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: blue;
-  background-color: limegreen;
+  background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -182,7 +182,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: blue;
-  background-color: limegreen;
+  background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -349,7 +349,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: steelblue;
+  color: blue;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }

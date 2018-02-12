@@ -23,7 +23,7 @@ class BookReview extends React.Component {
     super(props);
     this.state = {
       book:  [],
-      id: null,
+      id: '',
       title: '',
       review: '',
       deleted: false,
@@ -41,6 +41,7 @@ class BookReview extends React.Component {
       const findBook = (id) =>  bookData.filter(book => book.id == id)
       const id = this.props.currentId
       const book = findBook(id)
+      console.log(id)
         this.setState({
           book: book,
           id: book[0].id,
@@ -52,7 +53,6 @@ class BookReview extends React.Component {
 
     handleDelete(e) {
       e.preventDefault();
-      console.log(id);
       {this.props.deleteBook(this.state.id)}
       this.setState({
         deleted: true,
