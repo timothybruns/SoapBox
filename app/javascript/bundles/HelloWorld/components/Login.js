@@ -29,6 +29,10 @@ handleSubmit(e) {
     });
   }
 
+handleConsole(e) {
+  e.preventDefault();
+  console.log('yep!')
+}
 
     render() {
         return (

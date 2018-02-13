@@ -7,7 +7,8 @@ const Header = () => {
       <div className="topbar">
         <div className="logo">
           <Link to="/"><h1> SoapBox </h1> </Link>
-              <span className="logout"><a> Logout </a>
+              <span className="logout">
+                <a href="javascript:history.go(0)">Logout</a>
               <input type="search-bar" class="searchTerm" placeholder="Search"></input>
               <input type="submit"></input></span>
             </div>
