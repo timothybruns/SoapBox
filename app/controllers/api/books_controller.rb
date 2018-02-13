@@ -48,10 +48,7 @@ module Api
     end
 
     def create
-      # if current_user
-      #   params[:book][:user_id] = current_user.id
-      # end
-      # puts book_params
+      params[:book][:user_id] = params[:user_id]
       @book = Book.new(book_params)
 
       if @book.save

@@ -10,6 +10,7 @@ class BookForm extends React.Component {
       genre: '',
       review: '',
       submitButtonClicked: false,
+      user_id: props.userId,
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,6 +45,7 @@ render() {
           <input className="submitGenre" type="text" name="genre" value={this.state.genre} placeholder="genre" onChange={this.handleChange} />
             <br/>
           <textarea className="submitReview" type="textarea" name="review" value={this.state.review} placeholder="review" onChange={this.handleChange} />
+          <input className="hidden" type="hidden" name="aaaaaa" value={this.state.user_id} />
         </label>
           <br />
         <input className="submitButton" type="submit" value="Submit" />

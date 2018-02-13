@@ -89,7 +89,7 @@ getBookData(user_id) {
   })
 }
 
-bookSubmit(event, data) {
+bookSubmit(event, data, user_id) {
   event.preventDefault();
   fetch('/api/books', {
     method: 'POST',
@@ -100,7 +100,7 @@ bookSubmit(event, data) {
   }).then(res => res.json())
       .then(res => {
         // console.log(res)
-        this.getBookData(event, data, this.state.user_id);
+        this.getBookData(this.state.userId);
     });
 }
 
@@ -114,7 +114,7 @@ editBook(e, data, id) {
     body: JSON.stringify(data)
   }).then(res => res.json())
     .then(res => {
-      this.getBookData(e, data, this.state.user_id);
+      this.getBookData(e, data, this.state.userId);
     });
 }
 
@@ -124,7 +124,7 @@ deleteBook(e, data, id) {
     method: 'DELETE',
   }).then(res => res.json())
     .then(res => {
-        this.getBookData(e, data, this.state.user_id);
+        this.getBookData(this.state.userId);
     });
   }
 
@@ -136,6 +136,7 @@ deleteBook(e, data, id) {
         <Header />
         <Login
         userLogin = {this.userLogin}
+        userId = {this.state.userId}
         />
             <main>
               <Switch>
@@ -146,6 +147,7 @@ deleteBook(e, data, id) {
                 <Route path="/books/new"
                   render={props => (<BookForm {...props}
                     bookSubmit = {this.bookSubmit}
+                    userId = {this.state.userId}
                     />)
                   }/>
                 <Route path="/books/:id"
