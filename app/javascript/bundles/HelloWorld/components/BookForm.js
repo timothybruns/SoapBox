@@ -45,7 +45,7 @@ render() {
           <input className="submitGenre" type="text" name="genre" value={this.state.genre} placeholder="genre" onChange={this.handleChange} />
             <br/>
           <textarea className="submitReview" type="textarea" name="review" value={this.state.review} placeholder="review" onChange={this.handleChange} />
-          <input className="hidden" type="hidden" name="aaaaaa" value={this.state.user_id} />
+          <input className="hidden" type="hidden" name="hidden" value={this.state.user_id} />
         </label>
           <br />
         <input className="submitButton" type="submit" value="Submit" />

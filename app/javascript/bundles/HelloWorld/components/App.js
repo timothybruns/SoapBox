@@ -131,13 +131,18 @@ deleteBook(e, data, id) {
 
   render() {
     return (
-    <BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        {this.state.userLoggedIn === false ? (
+            <div className="login">
+              <Login
+              userLogin = {this.userLogin}
+              userId = {this.state.userId}
+              />
+            </div>
+        ) : (
       <div>
         <Header />
-        <Login
-        userLogin = {this.userLogin}
-        userId = {this.state.userId}
-        />
             <main>
               <Switch>
                 <Route path="/books"
@@ -162,7 +167,9 @@ deleteBook(e, data, id) {
               </Switch>
             </main>
           </div>
+        )}
       </BrowserRouter>
+    </div>
     );
   }
 }
