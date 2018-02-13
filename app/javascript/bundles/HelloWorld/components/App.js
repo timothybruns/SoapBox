@@ -10,7 +10,7 @@ import Book from './Book';
 import BookReview from './BookReview';
 import ArticlesList from './ArticlesList';
 import PodcastList from './PodcastList';
-// import Login from './Login'
+import Login from './Login'
 
 
 export default class App extends React.Component {
@@ -24,45 +24,61 @@ export default class App extends React.Component {
       retrievedBookData: false,
       bookData: null,
       userId: null,
+      userLoggedIn: false,
+      // retrievedUserBookData: false,
       // showBookForm: false,
     }
     this.bookSubmit = this.bookSubmit.bind(this);
     this.deleteBook = this.deleteBook.bind(this);
     this.editBook = this.editBook.bind(this);
-    // this.userLogin = this.userLogin.bind(this);
-    // this.getBooks = this.getBookData.bind(this);
+    this.userLogin = this.userLogin.bind(this);
+    this.getBookData = this.getBookData.bind(this);
+    // this.getUserBooks = this.getUserBooks.bind(this);
   }
 
 componentDidMount() {
-  this.getBookData(this.state.retrievedBookData)
+  this.getBookData()
 }
 
 
-// userLogin(event, data) {
-//   console.log(data)
-//   fetch('/login', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data)
-//   }).then(res => res.json())
-//       .then(res => {
-//         console.log(res);
-//         if (res.success) {
-//           this.getBookData();
-//           this.setState({
-//             userId: res.user_id,
-//           })
-//         } else {
-//           alert('Login failed!')
-//         }
-//   });
+userLogin(event, data) {
+  fetch('/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+      .then(res => {
+        console.log(res);
+        if (res.success) {
+          this.getBookData(res.user_id);
+          this.setState({
+            userLoggedIn: true,
+            userId: res.user_id
+          })
+        } else {
+          alert('Login failed!')
+          // this.getBookData()
+        }
+  });
+}
+
+// getUserBooks(e, data, user_id) {
+//   debugger;
+//   fetch(`/api/books/by_user/${user_id}`)
+//   .then(res => res.json())
+//   .then((res) => {
+//     // debugger
+//     this.setState({
+//       retrievedUserBookData: true,
+//       bookData: res.data.books,
+//     });
+//   })
 // }
 
-
-getBookData() {
-  fetch('/api/books')
+getBookData(user_id) {
+  fetch(`/api/books?user_id=${user_id}`)
   .then(res => res.json())
   .then((res) => {
     // debugger
@@ -84,7 +100,7 @@ bookSubmit(event, data) {
   }).then(res => res.json())
       .then(res => {
         // console.log(res)
-        this.getBookData();
+        this.getBookData(event, data, this.state.user_id);
     });
 }
 
@@ -98,17 +114,17 @@ editBook(e, data, id) {
     body: JSON.stringify(data)
   }).then(res => res.json())
     .then(res => {
-      this.getBookData();
+      this.getBookData(e, data, this.state.user_id);
     });
 }
 
 
-deleteBook(id) {
+deleteBook(e, data, id) {
   fetch(`/api/books/${id}`, {
     method: 'DELETE',
   }).then(res => res.json())
     .then(res => {
-        this.getBookData();
+        this.getBookData(e, data, this.state.user_id);
     });
   }
 
@@ -118,6 +134,9 @@ deleteBook(id) {
     <BrowserRouter>
       <div>
         <Header />
+        <Login
+        userLogin = {this.userLogin}
+        />
             <main>
               <Switch>
                 <Route path="/books"

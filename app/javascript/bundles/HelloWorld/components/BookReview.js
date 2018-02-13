@@ -2,22 +2,6 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import BookList from './BookList';
 
-// const BookReview = (props) => {
-//    const findBook = (id) =>  props.bookData.filter(book => book.id == id)
-//    const id = props.currentId
-//    const book = findBook(id)
-//      // console.log(book[0].id == props.currentId)
-//      // console.log(book[0].review)
-//      console.log(props.deleteBook)
-//   return (
-//     <div className="bookReview">
-//       <h1> This is a book review </h1>
-//       <h2> {book[0].title} </h2>
-//       <h3> {book[0].review} </h3>
-//     </div>
-//   );
-// };
-
 class BookReview extends React.Component {
   constructor(props) {
     super(props);
@@ -27,12 +11,12 @@ class BookReview extends React.Component {
       title: '',
       review: '',
       deleted: false,
-      // editButtonClick: false,
+      editButtonClick: false,
     };
       this.handleDelete = this.handleDelete.bind(this);
       // this.handleEdit = this.handleEdit.bind(this);
       // this.handleChange = this.handleChange.bind(this);
-      // this.showEditForm = this.showEditForm.bind(this);
+      this.showEditForm = this.showEditForm.bind(this);
   }
 
 
@@ -53,7 +37,7 @@ class BookReview extends React.Component {
 
     handleDelete(e) {
       e.preventDefault();
-      {this.props.deleteBook(this.state.id)}
+      {this.props.deleteBook(e, this.state, this.state.id)}
       this.setState({
         deleted: true,
       })
@@ -67,11 +51,12 @@ class BookReview extends React.Component {
     //   });
     // }
 
-    // showEditForm() {
-    //   this.setState({
-    //     editButtonClick: true,
-    //   });
-    // }
+    showEditForm() {
+      console.log('hello');
+      this.setState({
+        editButtonClick: true,
+      });
+    }
 
     // handleEdit(e) {
     //   e.preventDefault();
@@ -85,6 +70,7 @@ class BookReview extends React.Component {
               <p>{this.state.review}</p>
               <br/>
               <button className="delete" onClick={this.handleDelete}> Delete </button>
+              <button className="edit" onClick={this.showEditForm}> Edit </button>
             </div>
         )
     }

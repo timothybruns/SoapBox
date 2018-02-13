@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :books
+    get '/books/by_user/:user_id' => 'books#by_user'
   end
 
 

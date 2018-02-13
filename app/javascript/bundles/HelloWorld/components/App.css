@@ -217,6 +217,11 @@ h2 {
   }
 }
 
+span {
+  padding: 30px;
+  float: right;
+}
+
 .navLinks {
   margin-right: -15px;
   margin-left: -15px;
@@ -245,10 +250,6 @@ td {
   margin: 0px;
 }
 
-.pull-right {
-  float: right;
-  /*position: fixed;*/
-}
 
 html {
   font-family: sans-serif;

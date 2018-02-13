@@ -20,7 +20,6 @@ class SessionsController < ApplicationController
         success: false
       }
     end
-    byebug
   end
 
   def destroy

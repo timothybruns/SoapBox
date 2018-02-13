@@ -7,11 +7,9 @@ const Header = () => {
       <div className="topbar">
         <div className="logo">
           <Link to="/"><h1> SoapBox </h1> </Link>
-            <div className="pull-right">
-              <a> Logout </a>
+              <span className="logout"><a> Logout </a>
               <input type="search-bar" class="searchTerm" placeholder="Search"></input>
-              <input type="submit"></input>
-              </div>
+              <input type="submit"></input></span>
             </div>
           </div>
         <ul className="navLinks">

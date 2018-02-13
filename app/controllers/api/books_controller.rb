@@ -1,13 +1,29 @@
 module Api
   class BooksController < ApplicationController
     def index
-      @books = Book.all
+      user = User.find_by(id: params[:user_id])
+      if user
+        @books = user.books
+      else
+        @books = Book.all
+      end
       render json: {
         data: {
           books: @books
         }
       }
     end
+
+    # def by_user
+    #   byebug
+    #   user = User.find(params[:user_id])
+    #   @books = user.books
+    #   render json: {
+    #     data: {
+    #       books: @books
+    #     }
+    #   }
+    # end
 
     def show
       @book = Book.find(params[:id])
@@ -64,9 +80,13 @@ module Api
 
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
-
-    redirect_to books_path
+    if @book.destroy
+      render json: {
+        data: {
+          book: @book
+        }
+      } else redirect_to books_path
+    end
   end
 
       private
