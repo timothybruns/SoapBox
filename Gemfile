@@ -10,7 +10,7 @@ end
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
 group :production do
-  # gem 'pg', '~> 0.18'
+  gem 'pg', '~> 0.18'
 end
 
 gem 'listen', '~> 3.1.5'
@@ -39,7 +39,7 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'pg'
+  # gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
