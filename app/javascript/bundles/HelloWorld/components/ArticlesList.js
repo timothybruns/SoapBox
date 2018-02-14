@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ArticlesList = () => {
   return (
     <div className="articles">
-      <h1> Newstand </h1>
+      <h1 className="contentHeader"> Newstand </h1>
         <table>
             <thead>
                 <tr>

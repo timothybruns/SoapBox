@@ -33,6 +33,7 @@
 *::after {
   box-sizing: border-box; }*/
 
+
 table {
   padding: 10px;
   border-collapse: collapse;
@@ -49,6 +50,7 @@ tr:nth-child(odd) {
 
 .logo {
   font-family: arial;
+  background-color: #3b5998;
 }
 
 h2 {
@@ -57,18 +59,26 @@ h2 {
 
 .podcasts {
   padding: 30px;
+  background-color: #3b5998;
 }
 
 .booklist {
   padding: 30px;
+  background-color: #3b5998;
 }
 
 .articles {
   padding: 30px;
+  background-color: #3b5998;
+}
+
+.contentHeader {
+  color: white;
 }
 
 .review {
   padding: 30px;
+  background-color: #3b5998;
 }
 
 .bookCircle {
@@ -83,7 +93,7 @@ h2 {
   text-align: center;
   line-height: 250px;
   top: 50%;
-  color: blue;
+  color: #3b5998;
   background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
@@ -109,7 +119,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: white;
-  background-color: blue;
+  background-color: #3b5998;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -133,7 +143,7 @@ h2 {
   text-align: center;
   line-height: 250px;
   top: 50%;
-  color: blue;
+  color: #3b5998;
   background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
@@ -158,7 +168,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: white;
-  background-color: blue;
+  background-color: #3b5998;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -181,7 +191,7 @@ h2 {
   text-align: center;
   line-height: 250px;
   top: 50%;
-  color: blue;
+  color: #3b5998;
   background-color: #A9A9A9;
   font-size: 45px;
   font-family: sans-serif;
@@ -206,7 +216,7 @@ h2 {
   line-height: 250px;
   top: 50%;
   color: white;
-  background-color: blue;
+  background-color: #3b5998;
   font-size: 45px;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -242,6 +252,7 @@ td {
 
 .header {
   background-color: #E8E8E8;
+  border: .1px solid black;
 }
 
 .topbar {
@@ -250,6 +261,28 @@ td {
   margin: 0px;
 }
 
+.login {
+  background-color: gray;
+  background-size: cover;
+  text-align: center;
+  padding: 115px;
+}
+
+.loginHeader {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+input[type=email] {
+    width: 30%;
+    margin: 8px 0;
+  }
+
+input[type=password] {
+    width: 30%;
+    margin: 8px 0;
+  }
 
 html {
   font-family: sans-serif;
@@ -350,7 +383,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: blue;
+  color: #3b5998;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -516,7 +549,10 @@ h1, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 3.0rem; }
+  font-size: 3.5rem;
+  color: #E8E8E8;
+  padding: 10px;
+}
 
 /*h2, .h2 {
   font-size: 2rem; }*/

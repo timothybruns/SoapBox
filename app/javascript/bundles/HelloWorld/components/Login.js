@@ -37,13 +37,14 @@ handleConsole(e) {
     render() {
         return (
         <div className="login">
-          <form onSubmit={this.handleSubmit}>
-            <input type="email" name="email" placeholder="email" value={this.state.email} onChange={this.handleChange}/>
-            <br />
-            <input type="password" name="password" placeholder="password" value={this.state.password} onChange={this.handleChange}/>
-            <br />
-            <input type="submit"/>
-          </form>
+          <h2 className="loginHeader">Login to SoapBox!</h2>
+            <form onSubmit={this.handleSubmit}>
+              <input type="email" name="email" placeholder="email" value={this.state.email} onChange={this.handleChange}/>
+              <br />
+              <input type="password" name="password" placeholder="password" value={this.state.password} onChange={this.handleChange}/>
+              <br />
+              <input type="submit"/>
+            </form>
         </div>
         )
     }
