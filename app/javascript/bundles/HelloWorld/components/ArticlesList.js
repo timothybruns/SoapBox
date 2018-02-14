@@ -5,6 +5,7 @@ const ArticlesList = () => {
   return (
     <div className="articles">
       <h1 className="contentHeader"> Newstand </h1>
+      <body>
         <table>
             <thead>
                 <tr>
@@ -46,6 +47,7 @@ const ArticlesList = () => {
                 </tr>
             </tbody>
         </table>
+      </body>
     </div>
     );
 };

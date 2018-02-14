@@ -66,8 +66,8 @@ class BookReview extends React.Component {
     render() {
         return (
             <div className="review">
-              <h2>{this.state.title}</h2>
-              <p>{this.state.review}</p>
+              <h2 className="bookTitle">{this.state.title}</h2>
+              <p className="bookReview">{this.state.review}</p>
               <br/>
               <button className="delete" onClick={this.handleDelete}> Delete </button>
               <button className="edit" onClick={this.showEditForm}> Edit </button>

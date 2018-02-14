@@ -7,6 +7,7 @@ const BookList = ({ bookData }) => {
     return bookData !== null ? (
       <div className="booklist">
         <h1 className="contentHeader"> Bookshelf </h1>
+        <body>
           <table>
             <thead>
               <tr>
@@ -26,7 +27,8 @@ const BookList = ({ bookData }) => {
             </tbody>
           </table>
           <br/>
-            <Link to="/books/new">Add a book</Link>
+            <Link className="newBook" to="/books/new">Add a book</Link>
+          </body>
       </div>
       ) : (
       <div className="loading">
