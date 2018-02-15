@@ -11,6 +11,7 @@ import BookReview from './BookReview';
 import ArticlesList from './ArticlesList';
 import PodcastList from './PodcastList';
 import Login from './Login'
+import Footer from './Footer'
 
 
 export default class App extends React.Component {
@@ -139,6 +140,7 @@ deleteBook(e, data, id) {
               userLogin = {this.userLogin}
               userId = {this.state.userId}
               />
+              <Footer />
             </div>
         ) : (
       <div>

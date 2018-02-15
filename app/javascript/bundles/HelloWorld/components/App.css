@@ -76,6 +76,20 @@ h2 {
   color: white;
 }
 
+.footer {
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #0D2C40;
+  color: #FFFFFF;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .review {
   padding: 30px;
   background-color: #3b5998;
@@ -83,11 +97,14 @@ h2 {
 
 .bookTitle {
   color: white;
+  padding: 12px;
 }
 
 .bookReview {
   color: white;
   text-align: justify;
+  padding: 20px;
+  margin: 10px;
 }
 
 .bookCircle {
