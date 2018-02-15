@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Header from './Header';
-// import Dashboard from './Dashboard';
 import { BrowserRouter, Switch, Link, Route } from 'react-router-dom';
-// import Home from './Home';
 import BookList from './BookList';
 import BookForm from './BookForm';
 import Book from './Book';
@@ -15,10 +13,6 @@ import Footer from './Footer'
 
 
 export default class App extends React.Component {
-  // static propTypes = {
-  //   name: PropTypes.string.isRequired, // this is passed from the Rails view
-  // };
-
   constructor(props) {
     super(props);
     this.state = {
