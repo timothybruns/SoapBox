@@ -16,6 +16,11 @@ const ArticlesList = () => {
             </thead>
             <tbody>
                 <tr>
+                    <td>"Tech Luminary Peter Thiel Parts Ways With Silicon Valley"</td>
+                    <td>The Wall Street Journal</td>
+                    <td>Tech</td>
+                </tr>
+                <tr>
                     <td>"Dollar Resumes Slide After Rallying on Trump's Comments"</td>
                     <td>The Wall Street Journal</td>
                     <td>Finance</td>
