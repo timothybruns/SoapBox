@@ -45,6 +45,8 @@ handleSubmit(e) {
                 <input type="password" name="password" placeholder="password" value={this.state.password} onChange={this.handleChange}/>
                 <br />
                 <input type="submit"/>
+                <br />
+                <Link to="/newUser">New? Sign up here!</Link>
               </form>
         </div>
         )

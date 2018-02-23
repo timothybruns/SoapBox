@@ -8,8 +8,9 @@ import Book from './Book';
 import BookReview from './BookReview';
 import ArticlesList from './ArticlesList';
 import PodcastList from './PodcastList';
-import Login from './Login'
-import Footer from './Footer'
+import Login from './Login';
+import Footer from './Footer';
+import NewUser from './NewUser';
 
 
 
@@ -136,6 +137,7 @@ deleteBook(e, data, id) {
               userId = {this.state.userId}
               />
               <Footer />
+              <Route path="/newUser" component={NewUser}/>
             </div>
         ) : (
       <div>
