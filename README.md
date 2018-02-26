@@ -3,6 +3,9 @@
 ## Heroku link:
 
 * https://soapbox-wdi.herokuapp.com/
+* USE TEST USER LOGIN INFO:
+    * email: test@gmail.com
+    * password: test
 
 ## The Problem
 
