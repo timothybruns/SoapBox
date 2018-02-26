@@ -9,7 +9,7 @@
 
 ## The Problem
 
-* The content which we ingest and broadcast online as a means to market ourselves is scattered among many social media applications. "Clever Name" application seeks to solve this problem as a centralized social media app that curates the content you'd like to broadcast and provide perspective on for your professional audience.
+* The content which we ingest and broadcast online as a means to market ourselves is scattered among many social media applications. SoapBox application seeks to solve this problem as a centralized social media app that curates the content you'd like to broadcast and provide perspective on for your professional audience.
 
 ## Brainstorm/Initial Thoughts
 
